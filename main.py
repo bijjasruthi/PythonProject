@@ -6,7 +6,6 @@ class CSV:
     CSV_FILE= "finance_data.csv"
     COLUMNS = ["date", "amount", "category", "description"]
 
-
     @classmethod
     def initialize_csv(cls):
         try:
@@ -22,6 +21,7 @@ class CSV:
             "category": category,
             "description": description
         }
+        
         with open (cls.CSV_FILE, "a", newline="") as csvfile:
             writer = csv.DictWriter(csvfile, fieldnames=cls.COLUMNS)
             writer.writerow(new_entry)
