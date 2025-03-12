@@ -1,6 +1,5 @@
 from datetime import datetime
 
-
 date_format= "%d-%m-%Y"
 CATEGORIES = {"I": "Income", "E": "Expense"}
 def get_date(prompt , allow_default=False):
@@ -37,3 +36,4 @@ def get_category():
 
 def get_description():
     return input("Enter a description (optional): ")
+
